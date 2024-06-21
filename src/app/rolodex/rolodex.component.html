@@ -1,0 +1,15 @@
+<div class="rolodex-container">
+    <div class="rolodex-list-item-container">
+      <ul class="rolodex-list">
+        <li class="rolodex-list-item"
+            *ngFor="let contact of contacts"
+            (click)="setContact(contact)">{{contact.name}} {{contact.surname}}</li>
+      </ul>
+    </div>
+    <app-business-card
+        *ngIf="contact"
+        [contact]="contact"
+        class="rolodex-business-card">
+    </app-business-card>
+  </div>
+  
